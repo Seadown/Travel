@@ -26,6 +26,7 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     "no-tabs":"off",
-    "quotes": [1, "single"]
+    "quotes": [1, "single"],
+    "no-unused-vars": 'off', // 不能有声明后未被使用的变量或参数
   }
 }
