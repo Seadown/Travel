@@ -16,7 +16,8 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 4000
       },
       swiperList: [{
         id: '001',
@@ -41,5 +42,4 @@ export default {
     background #cacaca
     .swiper-image
       width 100%
-
 </style>
