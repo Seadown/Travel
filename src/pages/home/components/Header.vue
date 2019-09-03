@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{this.city}}
+        {{this.doubleCities}}
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
     </router-link>
@@ -17,10 +17,13 @@
 </template>
 
 <script>
+// eslint-disable-next-line standard/object-curly-even-spacing
+import { mapState, mapGetters} from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city']),
+    ...mapGetters(['doubleCities'])
   }
 }
 </script>
@@ -49,7 +52,8 @@ export default {
       margin-left .2rem
       color #ccc
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
+      padding  0 .1rem
       float: right
       text-align center
       color white
