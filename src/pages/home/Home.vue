@@ -10,7 +10,7 @@
 
 <script>
 // eslint-disable-next-line no-unused-vars
-import HomeHeader from './components/Header'
+import HomeHeader from './components/HeaderHome'
 // eslint-disable-next-line no-unused-vars
 import HomeSwiper from './components/Swiper'
 // eslint-disable-next-line no-unused-vars

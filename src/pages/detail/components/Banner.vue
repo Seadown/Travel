@@ -9,7 +9,6 @@
         <div class="banner-title">北京雅山小筑民宿</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe6df;</span>
-          53
         </div>
       </div>
     </div>
