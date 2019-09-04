@@ -3,17 +3,18 @@
     <div class="banner" @click="handleBannerClick">
       <img
         class="banner-img"
-        src="http://himg1.qunarzz.com/imgs/201907/09/C.AuJG8gzjgDOKqH06z1024.jpg"
+        :src="bannerImg"
       />
       <div class="banner-info">
-        <div class="banner-title">北京雅山小筑民宿</div>
+        <div class="banner-title">{{this.sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe6df;</span>
+          {{this.bannerImgs.length}}
         </div>
       </div>
     </div>
     <common-gallary
-      :imgs="imgs"
+      :imgs="bannerImgs"
       v-show="showGallary"
       @close="handleGallaryClick"
     >
@@ -25,11 +26,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
   data () {
     return {
-      showGallary: false,
-      imgs: ['https://himg1.qunarzz.com/imgs/201907/09/C.-jGDMRjxUJ5oAGk6R480.jpg',
-        'https://himg1.qunarzz.com/imgs/201907/09/C.AuJG8gzjgDOKqH06z480.jpg']
+      showGallary: false
     }
   },
   methods: {
